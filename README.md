@@ -2,23 +2,27 @@
 
 
 
-A command-line tool to track job applications, roles, application dates, statuses, and notes.
+A command-line application built in Python to track job applications, application dates, statuses, and notes in a structured way.
 
 
 
 \## Why I built this
 
-To organize my job search process and maintain structured records of applications instead of tracking them manually.
+To manage my job search efficiently by keeping a local, organized record of applications instead of tracking them manually.
 
 
 
 \## Features
 
-\- Add job applications
+\- Add new job applications
 
-\- View all applications
+\- View all saved applications
 
-\- Store data locally in CSV format
+\- Update application status (Applied / Interview / Rejected)
+
+\- Filter applications by status
+
+\- Store data locally using CSV files
 
 
 
