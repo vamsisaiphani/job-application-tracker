@@ -61,6 +61,28 @@ def update_status():
     except ValueError:
         print("Invalid input.")
 
+def filter_by_status():
+    try:
+        status_filter = input("Enter status to filter (Applied / Interview / Rejected): ").strip()
+
+        with open("data/applications.csv", "r") as file:
+            lines = file.readlines()
+
+        print(f"\n--- Applications with status: {status_filter} ---")
+        found = False
+
+        for line in lines:
+            company, role, date, status, notes = line.strip().split(",")
+            if status.lower() == status_filter.lower():
+                print(f"{company} | {role} | {date} | {status} | {notes}")
+                found = True
+
+        if not found:
+            print("No applications found for this status.")
+
+    except FileNotFoundError:
+        print("No applications found.")
+
 def main():
     print("\nJob Application Tracker")
     print("1. Add application")
